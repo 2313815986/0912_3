@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular-animate.min.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100%;
+				height: 150px;
+				position: relative;
+				left: 0;
+				top: 0;
+				transition: all linear 1s; 
+				background: red;
+			}
+			div.ng-hide{
+				height: 0;
+				
+			}
+			
+		
+		</style>
+	</head>
+	
+	<body ng-app="app1" ng-controller="ct1">
+	隐藏：<input type="checkbox" ng-model="mycheck"/>
+		<div ng-hide="mycheck">动画效果——</div>
+		
+		<div ng-hide="mycheck">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var app = angular.module("app1",["ngAnimate"])
+		app.controller("ct1",function($scope){
+			
+		})
+		
+	</script>
+</html>
+
+
+
+<!--<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/angular-animate.min.js" type="text/javascript" charset="utf-8"></script>
+	<title>动画效果2</title>
+	<style type="text/css">
+			@keyframes myan{
+				from{
+					width: 100%;
+					height: 150px;
+				}
+				to{
+					width: 0;
+					height: 0;
+					
+				}
+			}
+			div.div1{
+				height: 150px;
+				width: 100%;
+				background: blue;
+			}
+			div.ng-hide{
+				animation: :10s myan;
+			}
+			
+	</style>
+</head>
+<body ng-app="app1" ng-controller="ct1">
+	动画：<input type="checkbox" ng-model="mycheck"/>
+	<div ng-hide="mycheck" class="div1">动画效果2</div>
+</body>
+<script type="text/javascript">
+	var app =angular.module("app1",["ngAnimate"])
+	app.controller("ct1",function($scope){
+		
+	})
+	
+</script>
+</html>-->
